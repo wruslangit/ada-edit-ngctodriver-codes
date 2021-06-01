@@ -1,0 +1,53 @@
+https://github.com/wruslangit/ada-edit-ngc-codes.git
+
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit$ git clone https://github.com/wruslangit/ada-edit-ngc-codes.git
+Cloning into 'ada-edit-ngc-codes'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 655 bytes | 327.00 KiB/s, done.
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit$ 
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit$ ls -al
+total 132
+drwxrwxr-x 29 wruslan wruslan  4096 May 31 15:28  .
+drwxrwxr-x  8 wruslan wruslan  4096 Mar 31 03:12  ..
+drwxrwxr-x  4 wruslan wruslan  4096 Apr 10 13:02  ada-ai-tools
+drwxrwxr-x  8 wruslan wruslan  4096 Dec 28 15:43  ada-ArmCortexM3
+drwxrwxr-x  8 wruslan wruslan  4096 Dec 28 15:33  ada-ArmCortexM7
+drwxrwxr-x  8 wruslan wruslan  4096 Feb 20 15:18  ada-concurrency-01
+drwxrwxr-x  8 wruslan wruslan  4096 Feb 22 11:34  ada-concurrency-02
+drwxrwxr-x  3 wruslan wruslan  4096 May 31 15:28  ada-edit-ngc-codes
+drwxrwxr-x  8 wruslan wruslan  4096 Feb 11 20:25  ada-embedded-tests
+drwxrwxr-x  9 wruslan wruslan  4096 Mar  7 12:18  ada-file-processing
+drwxrwxr-x  9 wruslan wruslan  4096 Apr  8 16:45  ada-gnat-gps
+drwxrwxr-x  8 wruslan wruslan  4096 Apr  8 16:46  ada-gnat-studio
+drwxrwxr-x  8 wruslan wruslan  4096 Feb 11 20:24  ada-k8000parport
+drwxrwxr-x  8 wruslan wruslan  4096 Feb 11 20:28  ada-k8055usb
+drwxrwxr-x  8 wruslan wruslan  4096 Dec 28 11:40  ada-plplot
+drwxrwxr-x  8 wruslan wruslan  4096 Dec 21 22:45  ada-ppdev
+drwxrwxr-x  3 wruslan wruslan  4096 Mar 15 07:58  ada-python
+drwxrwxr-x  8 wruslan wruslan  4096 Dec 27 11:06  ada-serial
+drwxrwxr-x  8 wruslan wruslan  4096 Feb 18 12:21  ada-spark2014
+drwxrwxr-x  9 wruslan wruslan  4096 Apr 10 11:39  ada-strings-unbounded-edit
+drwxrwxr-x  9 wruslan wruslan  4096 Apr 10 11:39 'ada-strings-unbounded-edit (copy)'
+drwxrwxr-x  8 wruslan wruslan  4096 Mar 24 02:10  app-linuxcnc-installation
+drwxrwxr-x  8 wruslan wruslan  4096 Apr  9 23:21  apps-hardware-linux-systems
+drwxrwxr-x 19 wruslan wruslan  4096 Mar 23 22:44  linuxcnc
+drwxrwxr-x  8 wruslan wruslan  4096 Apr  9 21:50  TEXT
+drwxrwxr-x  6 wruslan wruslan  4096 Apr  9 23:39  wruslandr-phd
+drwxrwxr-x  2 wruslan wruslan  4096 Mar 19 09:58  WRY-Photos
+drwxrwxr-x  4 wruslan wruslan  4096 Mar 15 15:34  zDOCS-All
+drwxrwxr-x  2 wruslan wruslan 20480 Mar  7 22:44  zzAda-2012-HTML-Reference-Manual
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit$ 
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit$ cd ada-edit-ngc-codes/
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit/ada-edit-ngc-codes$ 
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit/ada-edit-ngc-codes$ ls -al
+total 16
+drwxrwxr-x  3 wruslan wruslan 4096 May 31 15:28 .
+drwxrwxr-x 29 wruslan wruslan 4096 May 31 15:28 ..
+drwxrwxr-x  8 wruslan wruslan 4096 May 31 15:28 .git
+-rw-rw-r--  1 wruslan wruslan   80 May 31 15:28 README.md
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit/ada-edit-ngc-codes$ 
+
+

@@ -1,0 +1,233 @@
+gprbuild -d -P/home/wruslan/github-tests/ada-strings-asu/ada_strings_asu.gpr -s -k
+Compile
+   [Ada]          main_ada_strings_asu.adb
+   [Ada]          pkg_ada_datetime_stamp.adb
+   [Ada]          pkg_ada_file_read_display.adb
+   [Ada]          pkg_ada_linestring_split.adb
+   [Ada]          pkg_ada_realtime_delays.adb
+   [Ada]          strings_edit.adb                 <=== SUCCESS
+Bind
+   [gprbind]      main_ada_strings_asu.bexch
+   [Ada]          main_ada_strings_asu.ali
+Link
+   [link]         main_ada_strings_asu.adb
+[2021-04-10 10:24:37] process terminated successfully, elapsed time: 01.95s
+
+===========================================================
+wruslan@HPEliteBk8470p-ubstudio-20:~/github-tests/ada-strings-asu$ ls -al
+total 32
+drwxrwxr-x 7 wruslan wruslan 4096 Apr 10 10:01 .
+drwxrwxr-x 9 wruslan wruslan 4096 Apr 10 10:08 ..
+-rw-rw-r-- 1 wruslan wruslan 1810 Mar 30 09:47 ada_strings_asu.gpr
+drwxrwxr-x 2 wruslan wruslan 4096 Apr 10 10:26 docs
+drwxrwxr-x 2 wruslan wruslan 4096 Apr 10 10:24 exec
+drwxrwxr-x 2 wruslan wruslan 4096 Apr 10 10:04 files
+drwxrwxr-x 2 wruslan wruslan 4096 Apr 10 10:24 obj
+drwxrwxr-x 7 wruslan wruslan 4096 Apr 10 10:24 src
+wruslan@HPEliteBk8470p-ubstudio-20:~/github-tests/ada-strings-asu$ 
+
+wruslan@HPEliteBk8470p-ubstudio-20:~/github-tests/ada-strings-asu$ tree ./
+./
+├── ada_strings_asu.gpr
+├── docs
+│   ├── ada-split-strings.txt
+│   └── success-session-compile-strings-edit-PASE.txt
+├── exec
+│   └── main_ada_strings_asu.adx
+├── files
+│   └── ngc-code.ngc
+├── obj
+│   ├── ada_strings_asu-loc.xml
+│   ├── b__main_ada_strings_asu.adb
+│   ├── b__main_ada_strings_asu.ads
+│   ├── b__main_ada_strings_asu.ali
+│   ├── b__main_ada_strings_asu.o
+│   ├── gpsauto.cgpr
+│   ├── main_ada_strings_asu.adb.stderr
+│   ├── main_ada_strings_asu.adb.stdout
+│   ├── main_ada_strings_asu.ali
+│   ├── main_ada_strings_asu.bexch
+│   ├── main_ada_strings_asu.cswi
+│   ├── main_ada_strings_asu.o
+│   ├── pkg_ada_datetime_stamp.adb.stderr
+│   ├── pkg_ada_datetime_stamp.adb.stdout
+│   ├── pkg_ada_datetime_stamp.ali
+│   ├── pkg_ada_datetime_stamp.cswi
+│   ├── pkg_ada_datetime_stamp.o
+│   ├── pkg_ada_file_read_display.adb.stderr
+│   ├── pkg_ada_file_read_display.adb.stdout
+│   ├── pkg_ada_file_read_display.ali
+│   ├── pkg_ada_file_read_display.cswi
+│   ├── pkg_ada_file_read_display.o
+│   ├── pkg_ada_file_read_write.adb.stderr
+│   ├── pkg_ada_file_read_write.adb.stdout
+│   ├── pkg_ada_file_read_write.ali
+│   ├── pkg_ada_file_read_write.cswi
+│   ├── pkg_ada_file_read_write.o
+│   ├── pkg_ada_linestring_split.adb.stderr
+│   ├── pkg_ada_linestring_split.adb.stdout
+│   ├── pkg_ada_linestring_split.ali
+│   ├── pkg_ada_linestring_split.cswi
+│   ├── pkg_ada_linestring_split.o
+│   ├── pkg_ada_realtime_delays.adb.stderr
+│   ├── pkg_ada_realtime_delays.adb.stdout
+│   ├── pkg_ada_realtime_delays.ali
+│   ├── pkg_ada_realtime_delays.cswi
+│   ├── pkg_ada_realtime_delays.o
+│   ├── pkg_ada_strings_edit.adb.stderr
+│   ├── pkg_ada_strings_edit.adb.stdout
+│   ├── pkg_ada_strings_edit.ali
+│   ├── strings_edit.adb.stderr
+│   ├── strings_edit.adb.stdout
+│   ├── strings_edit.ali
+│   ├── strings_edit.cswi
+│   └── strings_edit.o
+└── src
+    ├── main_ada_strings_asu.adb
+    ├── main_ada_strings_asu.hlp
+    ├── pkg-ada-datetime-stamp
+    │   ├── pkg_ada_datetime_stamp.adb
+    │   ├── pkg_ada_datetime_stamp.ads
+    │   └── pkg_ada_datetime_stamp.hlp
+    ├── pkg-ada-file-read-display
+    │   ├── pkg_ada_file_read_display.adb
+    │   ├── pkg_ada_file_read_display.ads
+    │   └── pkg_ada_file_read_display.hlp
+    ├── pkg-ada-linestring-split
+    │   ├── pkg_ada_linestring_split.adb
+    │   ├── pkg_ada_linestring_split.ads
+    │   └── pkg_ada_linestring_split.hlp
+    ├── pkg-ada-realtime-delays
+    │   ├── pkg_ada_realtime_delays.adb
+    │   ├── pkg_ada_realtime_delays.ads
+    │   └── pkg_ada_realtime_delays.hlp
+    └── pkg-ada-strings-edit
+        ├── strings_edit_3_7.lst
+        ├── strings_edit.adb
+        ├── strings_edit.ads
+        ├── strings_edit-base64.adb
+        ├── strings_edit-base64.ads
+        ├── strings_edit-chacha20.adb
+        ├── strings_edit-chacha20.ads
+        ├── strings_edit-chacha20-aead.adb
+        ├── strings_edit-chacha20-aead.ads
+        ├── strings_edit-chacha20-poly1305.adb
+        ├── strings_edit-chacha20-poly1305.ads
+        ├── strings_edit-distinguished_names.adb
+        ├── strings_edit-distinguished_names.ads
+        ├── strings_edit-fields.adb
+        ├── strings_edit-fields.ads
+        ├── strings_edit-float_edit.adb
+        ├── strings_edit-float_edit.ads
+        ├── strings_edit-floats.ads
+        ├── strings_edit-generic_scale.adb
+        ├── strings_edit-generic_scale.ads
+        ├── strings_edit.gpr
+        ├── strings_edit-integer_edit.adb
+        ├── strings_edit-integer_edit.ads
+        ├── strings_edit-integers.ads
+        ├── strings_edit-integers-subscript.ads
+        ├── strings_edit-integers-superscript.ads
+        ├── strings_edit-iso_8601.adb
+        ├── strings_edit-iso_8601.ads
+        ├── strings_edit-lexicographical_order.adb
+        ├── strings_edit-lexicographical_order.ads
+        ├── strings_edit-long_floats.ads
+        ├── strings_edit-object_identifiers.adb
+        ├── strings_edit-object_identifiers.ads
+        ├── strings_edit-quoted.adb
+        ├── strings_edit-quoted.ads
+        ├── strings_edit-roman_edit.adb
+        ├── strings_edit-roman_edit.ads
+        ├── strings_edit-streams.adb
+        ├── strings_edit-streams.ads
+        ├── strings_edit-streams-generic_integer.adb
+        ├── strings_edit-streams-generic_integer.ads
+        ├── strings_edit-streams-generic_modular.adb
+        ├── strings_edit-streams-generic_modular.ads
+        ├── strings_edit-streams-generic_unsigned.adb
+        ├── strings_edit-streams-generic_unsigned.ads
+        ├── strings_edit-streams-integers_32.ads
+        ├── strings_edit-streams-integers_64.ads
+        ├── strings_edit-streams-integers.ads
+        ├── strings_edit-streams-naturals.ads
+        ├── strings_edit-streams-unsigneds_32.ads
+        ├── strings_edit-streams-unsigneds_64.ads
+        ├── strings_edit-text_edit.adb
+        ├── strings_edit-utf8.adb
+        ├── strings_edit-utf8.ads
+        ├── strings_edit-utf8-blocks.ads
+        ├── strings_edit-utf8-categorization.adb
+        ├── strings_edit-utf8-categorization.ads
+        ├── strings_edit-utf8-handling.adb
+        ├── strings_edit-utf8-handling.ads
+        ├── strings_edit-utf8-integer_edit.adb
+        ├── strings_edit-utf8-integer_edit.ads
+        ├── strings_edit-utf8-iso_8859_10.adb
+        ├── strings_edit-utf8-iso_8859_10.ads
+        ├── strings_edit-utf8-iso_8859_2.adb
+        ├── strings_edit-utf8-iso_8859_2.ads
+        ├── strings_edit-utf8-iso_8859_3.adb
+        ├── strings_edit-utf8-iso_8859_3.ads
+        ├── strings_edit-utf8-iso_8859_4.adb
+        ├── strings_edit-utf8-iso_8859_4.ads
+        ├── strings_edit-utf8-iso_8859_5.adb
+        ├── strings_edit-utf8-iso_8859_5.ads
+        ├── strings_edit-utf8-iso_8859_6.adb
+        ├── strings_edit-utf8-iso_8859_6.ads
+        ├── strings_edit-utf8-iso_8859_7.adb
+        ├── strings_edit-utf8-iso_8859_7.ads
+        ├── strings_edit-utf8-iso_8859_8.adb
+        ├── strings_edit-utf8-iso_8859_8.ads
+        ├── strings_edit-utf8-iso_8859_9.adb
+        ├── strings_edit-utf8-iso_8859_9.ads
+        ├── strings_edit-utf8-itu_t61.adb
+        ├── strings_edit-utf8-itu_t61.ads
+        ├── strings_edit-utf8-koi8.adb
+        ├── strings_edit-utf8-koi8.ads
+        ├── strings_edit-utf8-macos_roman.adb
+        ├── strings_edit-utf8-macos_roman.ads
+        ├── strings_edit-utf8-mapping.adb
+        ├── strings_edit-utf8-mapping.ads
+        ├── strings_edit-utf8-maps.adb
+        ├── strings_edit-utf8-maps.ads
+        ├── strings_edit-utf8-maps-constants.ads
+        ├── strings_edit-utf8-radix50.adb
+        ├── strings_edit-utf8-radix50.ads
+        ├── strings_edit-utf8-recoding_streams.adb
+        ├── strings_edit-utf8-recoding_streams.ads
+        ├── strings_edit-utf8-subscript.adb
+        ├── strings_edit-utf8-subscript.ads
+        ├── strings_edit-utf8-subscript-integer_edit.ads
+        ├── strings_edit-utf8-superscript.adb
+        ├── strings_edit-utf8-superscript.ads
+        ├── strings_edit-utf8-superscript-integer_edit.ads
+        ├── strings_edit-utf8-wildcards.adb
+        ├── strings_edit-utf8-wildcards.ads
+        ├── strings_edit-utf8-wildcards-case_insensitive.adb
+        ├── strings_edit-utf8-wildcards-case_insensitive.ads
+        ├── strings_edit-utf8-windows_1250.adb
+        ├── strings_edit-utf8-windows_1250.ads
+        ├── strings_edit-utf8-windows_1251.adb
+        ├── strings_edit-utf8-windows_1251.ads
+        ├── strings_edit-utf8-windows_1252.adb
+        ├── strings_edit-utf8-windows_1252.ads
+        ├── strings_edit-utf8-windows_1253.adb
+        ├── strings_edit-utf8-windows_1253.ads
+        ├── strings_edit-utf8-windows_1254.adb
+        ├── strings_edit-utf8-windows_1254.ads
+        ├── strings_edit-utf8-windows_1255.adb
+        ├── strings_edit-utf8-windows_1255.ads
+        ├── strings_edit-utf8-windows_1256.adb
+        ├── strings_edit-utf8-windows_1256.ads
+        ├── strings_edit-utf8-windows_1257.adb
+        ├── strings_edit-utf8-windows_1257.ads
+        ├── strings_edit-utf8-windows_1258.adb
+        └── strings_edit-utf8-windows_1258.ads
+
+10 directories, 186 files
+wruslan@HPEliteBk8470p-ubstudio-20:~/github-tests/ada-strings-asu$ 
+
+
+
+

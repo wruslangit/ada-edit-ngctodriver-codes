@@ -1,0 +1,58 @@
+-- File : ada_edit_ngctodriver_codes.gpr
+-- Date : Tue 01 Jun 2021 12:41:11 PM +08
+-- Env	: Linux HPEliteBk8470p-ubstudio-20 5.10.25-rt35 #3 SMP PREEMPT_RT 
+-- Wed Apr 7 12:33:26 +08 2021 x86_64 x86_64 x86_64 GNU/Linux
+-- Author: WRY
+
+-- ========================================================
+project ada_edit_ngctodriver_codes is
+-- ========================================================
+   -- for Languages   use ("Ada", "C", "C++");
+   -- for Languages   use ("Ada", "C");
+   for Languages use ("Ada");
+
+   for Source_Dirs use ("src/**"); -- Covers every subdirectory in src
+   for Object_Dir  use "obj";      -- NOTE: No parantheses
+   for Exec_Dir    use "exec";     -- NOTE: No parantheses
+
+   for Main      use ("main_ada_edit_ngctodriver_codes.adb");
+      
+   -- ======== for Builder gprbuild =======================
+   package Builder is
+      for Executable ("main_ada_edit_ngctodriver_codes.adb") 
+                  use "main_ada_edit_ngctodriver_codes.adx";  -- NOTE: No parantheses
+   end Builder;
+   
+   -- ======== File naming ================================
+   package Naming is
+      for Spec_Suffix ("ada") use ".ads";
+      for Body_Suffix ("ada") use ".adb";
+   end Naming;
+
+   -- ======== for the Compiler ===========================
+   package Compiler is
+      for Default_Switches ("ada") use ("-c", "-gnat2012", "-gnat12");
+   end Compiler;
+
+   -- ======== for the Binder =============================
+   -- RUN: gnatbind --help
+   package Binder is
+  
+   end Binder;
+
+   -- ======== for the Linker =============================
+   -- RUN: gnatlink --help
+   package Linker is
+   
+   end Linker;
+
+   -- ======== for the IDE ================================
+   package IDE is
+
+   end IDE;
+
+-- ========================================================
+end ada_edit_ngctodriver_codes;
+-- ========================================================
+
+

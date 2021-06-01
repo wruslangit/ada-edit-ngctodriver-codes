@@ -1,0 +1,125 @@
+
+===========================================================
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit/ada-edit-ngc-codes$ date
+Tue 01 Jun 2021 12:02:52 PM +08
+
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit/ada-edit-ngc-codes$ uname -a
+Linux HPEliteBk8470p-ubstudio-20 5.10.25-rt35 
+#3 SMP PREEMPT_RT Wed Apr 7 12:33:26 +08 2021 x86_64 x86_64 x86_64 GNU/Linux
+
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit/ada-edit-ngc-codes$ lsb_release -a
+LSB Version:	core-11.1.0ubuntu2-noarch:security-11.1.0ubuntu2-noarch
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.2 LTS
+Release:	20.04
+Codename:	focal
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit/ada-edit-ngc-codes$ 
+
+===========================================================
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit$ cd ada-edit-ngc-codes
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit/ada-edit-ngc-codes$ ls -al
+total 44
+drwxrwxr-x  9 wruslan wruslan 4096 May 31 15:48 .
+drwxrwxr-x 30 wruslan wruslan 4096 Jun  1 12:01 ..
+-rw-rw-r--  1 wruslan wruslan 1826 May 31 15:48 ada_edit_ngc_codes.gpr
+drwxrwxr-x  3 wruslan wruslan 4096 May 31 15:43 docs
+drwxrwxr-x  2 wruslan wruslan 4096 Jun  1 12:01 exec
+drwxrwxr-x  5 wruslan wruslan 4096 Jun  1 11:58 files
+drwxrwxr-x  8 wruslan wruslan 4096 Jun  1 12:01 .git
+drwxrwxr-x  2 wruslan wruslan 4096 Jun  1 12:01 obj
+-rw-rw-r--  1 wruslan wruslan   80 May 31 15:28 README.md
+drwxrwxr-x  2 wruslan wruslan 4096 Jun  1 11:57 sessions
+drwxrwxr-x  6 wruslan wruslan 4096 Jun  1 09:54 src
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit/ada-edit-ngc-codes$ 
+===========================================================
+
+FORMAT (8 FIELDS)
+
+LINE ACTION X Y Z I J F
+
+ 1970 G00  1.29754E+01  1.24749E+02  5.00000E+00  0.00000E+00  0.00000E+00  4.00000E+02 ==> FIXED
+ 
+ 1970 ubsaction = G00
+ 1970 ubsnext_x = X[12.975412*#10+#6]
+ 1970 fltnext_x =  1.29754E+01
+ 1970 ubsnext_y = Y[124.749177*#10+#7]
+ 1970 fltnext_y =  1.24749E+02
+
+2160 G01  1.29754E+01  5.02742E+01  1.00000E+00 -3.55835E+00  4.41923E+00  4.00000E+02
+2160 G01  1.29754E+01  5.02742E+01  1.00000E+00  0.00000E+00  0.00000E+00  4.00000E+02  ==> FIXED
+
+2160 ubsaction = G01
+2160 ubsnext_x = X[12.975412*#10+#6]
+2160 fltnext_x =  1.29754E+01
+2160 ubsnext_y = Y[50.274243*#10+#7]
+2160 fltnext_y =  5.02742E+01
+2160 ubsnext_z = Z[1.000000*#11+#8]
+2160 fltnext_z =  1.00000E+00
+
+2140 G02  2.58863E+01  5.15288E+01  1.00000E+00 -1.01178E+01  4.41583E+00  4.00000E+02
+ 
+ 2140 ubsaction = G02
+ 2140 ubsnext_x = X[25.886277*#10+#6]
+ 2140 fltnext_x =  2.58863E+01
+ 2140 ubsnext_y = Y[51.528766*#10+#7]
+ 2140 fltnext_y =  5.15288E+01
+ 2140 ubsnext_z = Z[1.000000*#11+#8]
+ 2140 fltnext_z =  1.00000E+00
+ 2140 ubsnext_i = I[-10.117810*#10]
+ 2140 fltnext_i = -1.01178E+01
+ 2140 ubsnext_j = J[4.415827*#10]
+ 2140 fltnext_j =  4.41583E+00
+
+1880 G03  2.68297E+01  1.05245E+02  1.00000E+00 -3.72545E+01  5.59585E+00  4.00000E+02
+
+ 1880 ubsaction = G03
+ 1880 ubsnext_x = X[26.829692*#10+#6]
+ 1880 fltnext_x =  2.68297E+01
+ 1880 ubsnext_y = Y[105.245024*#10+#7]
+ 1880 fltnext_y =  1.05245E+02
+ 1880 ubsnext_z = Z[1.000000*#11+#8]
+ 1880 fltnext_z =  1.00000E+00
+ 1880 ubsnext_i = I[-37.254521*#10]
+ 1880 fltnext_i = -3.72545E+01
+ 1880 ubsnext_j = J[5.595847*#10]
+ 1880 fltnext_j =  5.59585E+00
+
+===========================================================
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit/ada-edit-ngc-codes$ git add .
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit/ada-edit-ngc-codes$ git commit -m "done ngc-code.ngc_file_04.txt"
+[main b4c4a89] done ngc-code.ngc_file_04.txt
+ 26 files changed, 4509 insertions(+), 341 deletions(-)
+ rewrite exec/main_ada_edit_ngc_codes.adx (87%)
+ create mode 100644 files/ngc-code.ngc_file_04.txt
+ create mode 100644 files/output_run03/ngc-code.ngc_file_01.txt
+ create mode 100644 files/output_run03/ngc-code.ngc_file_02.txt
+ create mode 100644 files/output_run03/ngc-code.ngc_file_03.txt
+ create mode 100644 files/output_run03/ngc-code.ngc_file_04.txt
+ create mode 100644 obj/ada_edit_ngc_codes-loc.xml
+ delete mode 100644 obj/gpsauto.cgpr
+ rewrite obj/main_ada_edit_ngc_codes.o (93%)
+ rewrite obj/pkg_ada_vectorize_splitline.o (96%)
+ create mode 100644 sessions/session-006.txt
+ create mode 100644 sessions/session-007.txt
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit/ada-edit-ngc-codes$ 
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit/ada-edit-ngc-codes$ git push origin main
+Username for 'https://github.com': wruslangit
+Password for 'https://wruslangit@github.com': 
+Enumerating objects: 48, done.
+Counting objects: 100% (48/48), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (28/28), done.
+Writing objects: 100% (28/28), 113.83 KiB | 3.67 MiB/s, done.
+Total 28 (delta 13), reused 0 (delta 0)
+remote: Resolving deltas: 100% (13/13), completed with 12 local objects.
+To https://github.com/wruslangit/ada-edit-ngc-codes.git
+   5ee6e9b..b4c4a89  main -> main
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit/ada-edit-ngc-codes$ 
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslangit/ada-edit-ngc-codes$ 
+
+===========================================================
+ALHAMDULILLAH 3 TIMES.
+===========================================================
+
+ 
+ 

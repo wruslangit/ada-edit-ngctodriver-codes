@@ -1,0 +1,29 @@
+[GENERATED OBJECT FILE]
+b__main_ada_edit_ngctodriver_codes.o
+[PROJECT FILES]
+/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr
+20210601044200
+[BOUND OBJECT FILES]
+/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/obj/pkg_ada_datetime_stamp.o
+/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/obj/pkg_ada_linestring_split.o
+/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/obj/pkg_ada_realtime_delays.o
+/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/obj/pkg_ada_vectorize_splitline.o
+/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/obj/main_ada_edit_ngctodriver_codes.o
+[GENERATED SOURCE FILES]
+b__main_ada_edit_ngctodriver_codes.ads
+b__main_ada_edit_ngctodriver_codes.adb
+b__main_ada_edit_ngctodriver_codes.ali
+[RESULTING OPTIONS]
+-L/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/obj/
+-L/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/obj/
+-L/usr/lib/gcc/x86_64-linux-gnu/9/adalib/
+-shared
+-shared-libgcc
+-lgnarl-9
+-lgnat-9
+-lpthread
+-lrt
+-ldl
+[RUN PATH OPTION]
+/usr/lib/gcc/x86_64-linux-gnu/9/adalib/
+/usr/lib

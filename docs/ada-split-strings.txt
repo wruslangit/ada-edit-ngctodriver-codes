@@ -1,0 +1,36 @@
+
+package ASU renames Ada.Strings_Unbounded;
+
+https://www.radford.edu/~nokie/classes/320/std_lib_html/ada-strings-unbounded.html
+
+procedure Find_Token
+  (Source : in Unbounded_String;
+   Set    : in Maps.Character_Set;
+   Test   : in Membership;
+   First  : out Positive;
+   Last   : out Natural);
+   
+
+function Index_Non_Blank
+  (Source : in Unbounded_String;
+   Going  : in Direction := Forward)
+   return   Natural;
+   
+   
+http://www.dmitry-kazakov.de/ada/strings_edit.htm
+
+package Edit_Float is new Float_Edit (Float);
+use Edit_Float;
+   . . .
+   Line        : String (1..512); -- A line to parse
+   Pointer     : Integer;
+   Value       : Float;
+   TabAndSpace : Ada.Strings.Maps.Character_Set := To_Set (" " & Ada.Characters.Latin_1.HT);
+begin
+   . . .
+   Pointer := Line'First;
+   Get (Line, Pointer, TabAndSpace); -- Skip tabs and spaces
+   Get (Line, Pointer, Value);       -- Get number
+   Get (Line, Pointer, TabAndSpace); -- Skip tabs and spaces
+   
+   

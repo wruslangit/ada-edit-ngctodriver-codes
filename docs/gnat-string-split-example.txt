@@ -1,0 +1,190 @@
+http://ada-dk.org/2010/12/using-gnat-string_split-to-split-a-string/
+
+
+
+
+--  A procedure to illustrate the use of the GNAT.String_Split package.  This
+--  is just the simplest, most basic usage; the package can do a lot more, like
+--  splitting on a char set, re-split the string with new separators, and
+--  return the separators found before and after each substring.  Left as an
+--  exercise for the reader. ;)
+ 
+with Ada.Characters.Latin_1;
+with Ada.Text_IO; 
+with GNAT.String_Split;
+ 
+procedure Explode is
+   use Ada.Characters;
+   use Ada.Text_IO;
+   use GNAT;
+ 
+   Data : constant String :=
+            "This becomes a " & Latin_1.HT & " bunch of     substrings";
+   --  The input data would normally be read from some external source or 
+   --  whatever. Latin_1.HT is a horizontal tab.
+ 
+   Subs : String_Split.Slice_Set;
+   --  Subs is populated by the actual substrings.
+ 
+   Seps : constant String := " " & Latin_1.HT;  
+   --  just an arbitrary simple set of whitespace.                                 
+begin
+   Put_Line ("Splitting '" & Data & "' at whitespace.");
+   --  Introduce our job.
+ 
+   String_Split.Create (S          => Subs,
+                        From       => Data,
+                        Separators => Seps,
+                        Mode       => String_Split.Multiple);
+   --  Create the split, using Multiple mode to treat strings of multiple
+   --  whitespace characters as a single separator.
+   --  This populates the Subs object.
+ 
+   Put_Line 
+     ("Got" & 
+      String_Split.Slice_Number'Image (String_Split.Slice_Count (Subs)) &
+      " substrings:");
+   --  Report results, starting with the count of substrings created.
+ 
+   for I in 1 .. String_Split.Slice_Count (Subs) loop
+      --  Loop though the substrings.  
+      declare
+         Sub : constant String := String_Split.Slice (Subs, I);
+         --  Pull the next substring out into a string object for easy handling.
+      begin
+         Put_Line (String_Split.Slice_Number'Image (I) &
+                   " -> " & 
+                   Sub & 
+                   " (length" & Positive'Image (Sub'Length) & 
+                   ")");
+         --  Output the individual substrings, and their length.
+ 
+      end;
+   end loop;
+end Explode;
+
+You compile and execute the Explode program like this:
+
+$ gnatmake explode.adb
+$ ./explode
+
+You should see output similar to this:
+
+Splitting 'This becomes a   bunch of     substrings' at whitespace.
+Got 6 substrings:
+ 1 -> This (length 4)
+ 2 -> becomes (length 7)
+ 3 -> a (length 1)
+ 4 -> bunch (length 5)
+ 5 -> of (length 2)
+ 6 -> substrings (length 10)
+
+The comments in the example should more or less explain what's going on, but for the sake of clarity, we're going to do a step-by-step walk-through of the code, starting with the dependencies and use clauses:
+
+with Ada.Characters.Latin_1;
+with Ada.Text_IO; 
+with GNAT.String_Split;
+ 
+procedure Explode is
+   use Ada.Characters;
+   use Ada.Text_IO;
+   use GNAT;
+
+The three with lines list the packages on which our program depends. When the compiler encounters these, it retrieves those packages from its library. The ”Procedure Explode is” line marks the start of our program, specifically the declarative part, where we declare/initialize our constants and variables. It also names our program Explode. Note the use clauses. Adding these enables us to do this:
+
+Put_Line ("Some text");
+
+instead of this
+
+Ada.Text_IO.Put_Line ("Some text");
+
+in the program. Very handy.
+
+As an exercise, try commenting the three use clauses, and prefix the actual package names to all types and procedures in the program.
+
+Next up we have this:
+
+Data : constant String :=
+            "This becomes a " & Latin_1.HT & " bunch of     substrings";
+
+This is the String we're going to split into individual components. Latin_1.HT is a constant declared in Ada.Characters.Latin_1. It inserts a horizontal tab in the string. Since we don't change the value of Data throughout the program, we've initialized it as a constant.
+
+Subs : String_Split.Slice_Set;
+
+The Subs variable is the container for the individual components, or “slices”.
+
+Seps : constant String := " " & Latin_1.HT;  
+
+These are our separators. In this case we want to split the string on space (” ”) and horizontal tabs (Latin_1.HT). Note that the separators are NOT included as part of the resulting Slice_Set. Try experimenting with different separators.
+
+begin
+   Put_Line ("Splitting '" & Data & "' at whitespace.");
+
+begin marks the beginning of the body of our program. Immediately after begin we output a short message.
+
+String_Split.Create (S          => Subs,
+                     From       => Data,
+                     Separators => Seps,
+                     Mode       => String_Split.Multiple);
+
+This is the meat of the program. In this one statement the Data String is split into individual slices based on the Seps separators, and the resulting slices are placed in the Subs Slice_Set. Note the Mode ⇒ String_Split.Multiple parameter. When using Multiple mode, String_Split.Create will treat consecutive whitespace and horizontal tabs as one separator.
+
+As an exercise, try changing Multiple to Single and see what happens.
+
+Put_Line 
+     ("Got" & 
+      String_Split.Slice_Number'Image (String_Split.Slice_Count (Subs)) &
+      " substrings:");
+
+This is the line that's responsible for the output:
+
+Got 6 substrings:
+
+Yes, it looks like an awfully long line for very little output, but there's method to the madness:
+
+String_Split.Slice_Number'Image (String_Split.Slice_Count (Subs))
+
+That line is responsible for the “6” part of the output. What it does is transform the Integer value 6 into the String value “6”, and it does so using the Image attribute. String_Split.Slice_Count (Subs) return a Slice_Number type, which is basically just an Integer with a value >=0, and Image then convert this to a String suitable for output.
+
+for I in 1 .. String_Split.Slice_Count (Subs) loop
+   --  Loop though the substrings.   
+   declare
+      Sub : constant String := String_Split.Slice (Subs, I);
+      --  Pull the next substring out into a string object for easy handling.
+   begin
+      Put_Line (String_Split.Slice_Number'Image (I) &
+                " -> " & 
+                Sub & 
+                " (length" & Positive'Image (Sub'Length) & 
+                ")");
+      --  Output the individual substrings, and their length.    
+   end;
+end loop;
+
+Here we start a loop that repeats String_Split.Slice_Count (Subs) times, which in our case is 6. So on the first loop I is 1 and on the final loop I is 6. Inside the loop we declare a new block. This enables us to locally initialize the Sub constant, which on each repeat of the loop is initialized anew with the next slice from our split. This is done using the String_Split.Slice function which takes our Sub constant and the I loop counter as parameters, and return a String. In the body of the block we output each slice, along with its index in the Subs Slice_Set and its length. As you can see, we once again make use of the Image attribute to convert numeric values to Strings.
+
+You can get rid of the block inside the loop like this:
+
+for I in 1 .. String_Split.Slice_Count (Subs) loop
+   --  Loop though the substrings.   
+   Put_Line 
+     (String_Split.Slice_Number'Image (I) &
+      " -> " & 
+      String_Split.Slice (Subs, I) & 
+      " (length" & Positive'Image (String_Split.Slice (Subs, I)'Length) & 
+      ")");
+   --  Output the individual substrings, and their length.
+end loop;
+
+As you can see, we're no longer using the Sub constant. Instead we call String_Split.Slice (Subs, I) directly. It works just the same, but it is perhaps a bit less readable.
+
+Another option is to use an Ada.Strings.Unbounded.Unbounded_String. You can see a possible solution here.
+
+Finally we have:
+
+end Explode;
+
+Which simply ends the program.
+
+And with that, we've concluded this small tutorial on how to split a string into individual parts (slices) based on a set of separators. I hope you enjoyed reading it, as much as I enjoyed writing it.
+
