@@ -4,6 +4,7 @@ b__main_ada_edit_ngctodriver_codes.o
 /home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr
 20210601044200
 [BOUND OBJECT FILES]
+/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/obj/pkg_ada_cnc_driver_codes.o
 /home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/obj/pkg_ada_datetime_stamp.o
 /home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/obj/pkg_ada_linestring_split.o
 /home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/obj/pkg_ada_realtime_delays.o

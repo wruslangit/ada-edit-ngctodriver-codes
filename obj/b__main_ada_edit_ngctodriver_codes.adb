@@ -23,7 +23,7 @@ package body ada_main is
    E037 : Short_Integer; pragma Import (Ada, E037, "system__traceback__symbolic_E");
    E132 : Short_Integer; pragma Import (Ada, E132, "ada__tags_E");
    E149 : Short_Integer; pragma Import (Ada, E149, "ada__streams_E");
-   E193 : Short_Integer; pragma Import (Ada, E193, "gnat_E");
+   E169 : Short_Integer; pragma Import (Ada, E169, "gnat_E");
    E166 : Short_Integer; pragma Import (Ada, E166, "system__file_control_block_E");
    E151 : Short_Integer; pragma Import (Ada, E151, "system__finalization_root_E");
    E147 : Short_Integer; pragma Import (Ada, E147, "ada__finalization_E");
@@ -34,15 +34,16 @@ package body ada_main is
    E128 : Short_Integer; pragma Import (Ada, E128, "ada__strings__unbounded_E");
    E114 : Short_Integer; pragma Import (Ada, E114, "system__task_info_E");
    E106 : Short_Integer; pragma Import (Ada, E106, "system__task_primitives__operations_E");
-   E170 : Short_Integer; pragma Import (Ada, E170, "ada__calendar_E");
-   E174 : Short_Integer; pragma Import (Ada, E174, "ada__calendar__time_zones_E");
+   E175 : Short_Integer; pragma Import (Ada, E175, "ada__calendar_E");
+   E179 : Short_Integer; pragma Import (Ada, E179, "ada__calendar__time_zones_E");
    E097 : Short_Integer; pragma Import (Ada, E097, "ada__real_time_E");
    E161 : Short_Integer; pragma Import (Ada, E161, "ada__text_io_E");
-   E195 : Short_Integer; pragma Import (Ada, E195, "gnat__string_split_E");
-   E168 : Short_Integer; pragma Import (Ada, E168, "pkg_ada_datetime_stamp_E");
-   E192 : Short_Integer; pragma Import (Ada, E192, "pkg_ada_linestring_split_E");
-   E203 : Short_Integer; pragma Import (Ada, E203, "pkg_ada_realtime_delays_E");
-   E207 : Short_Integer; pragma Import (Ada, E207, "pkg_ada_vectorize_splitline_E");
+   E171 : Short_Integer; pragma Import (Ada, E171, "gnat__string_split_E");
+   E168 : Short_Integer; pragma Import (Ada, E168, "pkg_ada_cnc_driver_codes_E");
+   E173 : Short_Integer; pragma Import (Ada, E173, "pkg_ada_datetime_stamp_E");
+   E197 : Short_Integer; pragma Import (Ada, E197, "pkg_ada_linestring_split_E");
+   E205 : Short_Integer; pragma Import (Ada, E205, "pkg_ada_realtime_delays_E");
+   E209 : Short_Integer; pragma Import (Ada, E209, "pkg_ada_vectorize_splitline_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -53,40 +54,47 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E161 := E161 - 1;
       declare
          procedure F1;
-         pragma Import (Ada, F1, "ada__text_io__finalize_spec");
+         pragma Import (Ada, F1, "pkg_ada_cnc_driver_codes__finalize_body");
       begin
+         E168 := E168 - 1;
          F1;
       end;
-      E128 := E128 - 1;
+      E161 := E161 - 1;
       declare
          procedure F2;
-         pragma Import (Ada, F2, "ada__strings__unbounded__finalize_spec");
+         pragma Import (Ada, F2, "ada__text_io__finalize_spec");
       begin
          F2;
       end;
-      E142 := E142 - 1;
+      E128 := E128 - 1;
       declare
          procedure F3;
-         pragma Import (Ada, F3, "system__storage_pools__subpools__finalize_spec");
+         pragma Import (Ada, F3, "ada__strings__unbounded__finalize_spec");
       begin
          F3;
       end;
-      E144 := E144 - 1;
+      E142 := E142 - 1;
       declare
          procedure F4;
-         pragma Import (Ada, F4, "system__finalization_masters__finalize_spec");
+         pragma Import (Ada, F4, "system__storage_pools__subpools__finalize_spec");
       begin
          F4;
       end;
+      E144 := E144 - 1;
       declare
          procedure F5;
-         pragma Import (Ada, F5, "system__file_io__finalize_body");
+         pragma Import (Ada, F5, "system__finalization_masters__finalize_spec");
+      begin
+         F5;
+      end;
+      declare
+         procedure F6;
+         pragma Import (Ada, F6, "system__file_io__finalize_body");
       begin
          E165 := E165 - 1;
-         F5;
+         F6;
       end;
       declare
          procedure Reraise_Library_Exception_If_Any;
@@ -225,7 +233,7 @@ package body ada_main is
       Ada.Streams'Elab_Spec;
       E149 := E149 + 1;
       Gnat'Elab_Spec;
-      E193 := E193 + 1;
+      E169 := E169 + 1;
       System.File_Control_Block'Elab_Spec;
       E166 := E166 + 1;
       System.Finalization_Root'Elab_Spec;
@@ -249,9 +257,9 @@ package body ada_main is
       E106 := E106 + 1;
       Ada.Calendar'Elab_Spec;
       Ada.Calendar'Elab_Body;
-      E170 := E170 + 1;
+      E175 := E175 + 1;
       Ada.Calendar.Time_Zones'Elab_Spec;
-      E174 := E174 + 1;
+      E179 := E179 + 1;
       Ada.Real_Time'Elab_Spec;
       Ada.Real_Time'Elab_Body;
       E097 := E097 + 1;
@@ -259,15 +267,17 @@ package body ada_main is
       Ada.Text_Io'Elab_Body;
       E161 := E161 + 1;
       Gnat.String_Split'Elab_Spec;
-      E195 := E195 + 1;
-      pkg_ada_datetime_stamp'elab_body;
+      E171 := E171 + 1;
+      pkg_ada_cnc_driver_codes'elab_body;
       E168 := E168 + 1;
+      pkg_ada_datetime_stamp'elab_body;
+      E173 := E173 + 1;
       pkg_ada_linestring_split'elab_body;
-      E192 := E192 + 1;
+      E197 := E197 + 1;
       pkg_ada_realtime_delays'elab_body;
-      E203 := E203 + 1;
+      E205 := E205 + 1;
       pkg_ada_vectorize_splitline'elab_body;
-      E207 := E207 + 1;
+      E209 := E209 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -303,6 +313,7 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
+   --   /home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/obj/pkg_ada_cnc_driver_codes.o
    --   /home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/obj/pkg_ada_datetime_stamp.o
    --   /home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/obj/pkg_ada_linestring_split.o
    --   /home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/obj/pkg_ada_realtime_delays.o

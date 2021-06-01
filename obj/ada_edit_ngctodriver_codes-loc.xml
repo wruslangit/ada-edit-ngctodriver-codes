@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/main_ada_edit_ngctodriver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 22" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/main_ada_edit_ngctodriver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 96" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/main_ada_edit_ngctodriver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 97" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/main_ada_edit_ngctodriver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/main_ada_edit_ngctodriver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 39" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/main_ada_edit_ngctodriver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 31" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 71" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 88" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 71" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 71" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 45" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 45" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 45" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 71" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 45" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 45" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 45" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 47" line=" 54" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 236" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-vectorize-splitline/pkg_ada_vectorize_splitline.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 10" line=" 80" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 86" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 48" line=" 22" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 12" line=" 97" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/main_ada_edit_ngctodriver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 15" line=" 233" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 38" line=" 26" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 54" line=" 23" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 38" line=" 26" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 28" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 38" line=" 26" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 28" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 94" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 90" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 94" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 232" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 131" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 133" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 131" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 53" line=" 25" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 35" line=" 159" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 39" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 18" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 224" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 168" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 222" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 82" line=" 174" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 112" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 60" line=" 136" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 207" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 197" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 206" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 197" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 229" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 209" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 197" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 210" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 31" line=" 118" >
+      <vfs_project>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/ada_edit_ngctodriver_codes.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github/wruslangit/ada-edit-ngctodriver-codes/src/pkg-ada-cnc-driver-codes/pkg_ada_cnc_driver_codes.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>
