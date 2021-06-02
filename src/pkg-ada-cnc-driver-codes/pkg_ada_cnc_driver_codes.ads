@@ -17,14 +17,14 @@ is
    package AATIO renames Ada.Text_IO;
    
      
-   -- READ FROM fhandle_01 THEN WRITE TO fhandle_02 
-   procedure remove_gcode_comments(linestring : in String; 
-                                 out_fhandle_02 : in AATIO.File_Type; 
-                                 linecount: Integer);
+   -- (1) READ FROM fhandle_01 THEN WRITE TO fhandle_02 
+   procedure remove_gcode_comments(linestring : in String; out_fhandle_02 : in AATIO.File_Type; linecount: Integer);
    
-   -- READ FROM fhandle_02 THEN WRITE TO fhandle_03 
+   -- (2) READ FROM fhandle_02 THEN WRITE TO fhandle_03 
    procedure create_gcode_action_file;
    
+   -- (3) READ FROM fhandle_03 THEN WRITE TO fhandle_04 
+   procedure calculate_gcode_delta_actions; 
    
    
 -- ======================================================== 

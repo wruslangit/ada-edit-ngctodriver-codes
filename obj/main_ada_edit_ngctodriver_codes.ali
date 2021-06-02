@@ -18,7 +18,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main_ada_edit_ngctodriver_codes%b  main_ada_edit_ngctodriver_codes.adb  245a6357 NE OO SU IL
+U main_ada_edit_ngctodriver_codes%b  main_ada_edit_ngctodriver_codes.adb  ababe9b2 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
@@ -52,12 +52,12 @@ D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200312110721 5ab55268 interfaces%s
 D i-c.ads		20200312110721 5421119b interfaces.c%s
 D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
-D main_ada_edit_ngctodriver_codes.adb  20210601101359 c51f5531 main_ada_edit_ngctodriver_codes%b
-D pkg_ada_cnc_driver_codes.ads  20210601095349 8e31f8f1 pkg_ada_cnc_driver_codes%s
-D pkg_ada_datetime_stamp.ads  20210330052953 cf0a71cd pkg_ada_datetime_stamp%s
-D pkg_ada_linestring_split.ads  20210530072213 dfbcde15 pkg_ada_linestring_split%s
-D pkg_ada_realtime_delays.ads  20210330053253 fb7e33dc pkg_ada_realtime_delays%s
-D pkg_ada_vectorize_splitline.ads  20210601033615 8e79d4a5 pkg_ada_vectorize_splitline%s
+D main_ada_edit_ngctodriver_codes.adb  20210602055747 94620cd5 main_ada_edit_ngctodriver_codes%b
+D pkg_ada_cnc_driver_codes.ads  20210602023422 50bd2bf0 pkg_ada_cnc_driver_codes%s
+D pkg_ada_datetime_stamp.ads  20210602015858 cf0a71cd pkg_ada_datetime_stamp%s
+D pkg_ada_linestring_split.ads  20210602015858 dfbcde15 pkg_ada_linestring_split%s
+D pkg_ada_realtime_delays.ads  20210602015858 fb7e33dc pkg_ada_realtime_delays%s
+D pkg_ada_vectorize_splitline.ads  20210602015858 8e79d4a5 pkg_ada_vectorize_splitline%s
 D system.ads		20200312110721 4635ec04 system%s
 D s-atacco.ads		20200312110721 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200312110721 b45c2d8d system.atomic_counters%s
@@ -94,14 +94,14 @@ X 1 ada.ads
 X 7 a-reatim.ads
 39K13*Real_Time 185e18 18|7w10 8r10 25r32
 49O9*Time<duration> 18|36r36
-61V13*Clock{49O9} 18|66s22 129s23
+61V13*Clock{49O9} 18|66s22 119s23
 X 9 a-string.ads
 16K13*Strings 35e16 18|9r10 26r32
 X 11 a-strunb.ads
 76K21*Unbounded 491e26 18|9w18 26r40
 79R9*Unbounded_String<5|43R9> 474e14 18|49r27
-94V13*To_Unbounded_String{79R9} 18|87s28
-100V13*To_String{string} 18|94s42 97s40
+94V13*To_Unbounded_String{79R9} 18|86s28
+100V13*To_String{string} 18|93s42 96s40
 X 13 a-textio.ads
 49K13*Text_IO 471e16 18|6w10 24r32
 52P9*File_Type 18|42r28 52r29 53r29 54r29 55r29
@@ -110,37 +110,37 @@ X 13 a-textio.ads
 53n32*Out_File{53E9} 18|57r48 58r48
 86U14*Create 18|77s9 78s9
 92U14*Open 18|74s9
-98U14*Close 18|103s9 104s9 105s9
-101U14*Reset 18|82s9
-166U14*New_Line 18|69s9 127s9
-183V13*End_Of_File{boolean} 18|86s19
-242U14*Put 18|130s24
-253V13*Get_Line{string} 18|87s53
-259U14*Put_Line 18|94s12
-263U14*Put_Line 18|67s9 68s24 128s9
+98U14*Close 18|100s9 101s9 102s9
+101U14*Reset 18|81s9
+166U14*New_Line 18|69s9 117s9
+183V13*End_Of_File{boolean} 18|85s19
+242U14*Put 18|120s24
+253V13*Get_Line{string} 18|86s53
+259U14*Put_Line 18|93s12
+263U14*Put_Line 18|67s9 68s24 118s9
 X 18 main_ada_edit_ngctodriver_codes.adb
-19U11*main_ada_edit_ngctodriver_codes 19b11 133l5 133t36
+19U11*main_ada_edit_ngctodriver_codes 19b11 123l5 123t36
 24K12 ATIO=24:32 42r23 43r23 43r42 52r24 53r24 54r24 55r24 57r24 57r43 58r24
-. 58r43 67r4 68r19 69r4 74r4 77r4 78r4 82r4 86r14 87r48 94r7 103r4 104r4
-. 105r4 127r4 128r4 130r19
-25K12 ART=25:32 36r32 66r18 129r19
-26K12 ASU=26:40 49r23 87r24 94r38 97r36
-29K12 PADTS=29:28 66r29 68r4 127r19 130r4
-30K12 PARTD=30:28 131r4
+. 58r43 67r4 68r19 69r4 74r4 77r4 78r4 81r4 85r14 86r48 93r7 100r4 101r4
+. 102r4 117r4 118r4 120r19
+25K12 ART=25:32 36r32 66r18 119r19
+26K12 ASU=26:40 49r23 86r24 93r38 96r36
+29K12 PADTS=29:28 66r29 68r4 117r19 120r4
+30K12 PARTD=30:28 121r4
 31K12 PALSS=31:28
 32K12 PAVSL=32:28
-33K12 PACDC=33:28 97r7 110r7
-36o4 startClock{7|49O9} 66m4 131r38
-36o16 finishClock{7|49O9} 129m4 131r50
-42p4 inp_fhandle{13|52P9} 74m15 74r15 82m15 82r15 86r32 87r63 105m16 105r16
+33K12 PACDC=33:28 96r7 106r4 110r4
+36o4 startClock{7|49O9} 66m4 121r38
+36o16 finishClock{7|49O9} 119m4 121r50
+42p4 inp_fhandle{13|52P9} 74m15 74r15 81m15 81r15 85r32 86r63 102m16 102r16
 43e4 inp_fmode{13|53E9} 74r28
 44a4 inp_fname{string} 74r39
 45a4 inp_fform{string} 74r50
 46a4 inp_fOwnID{string}
-48i4 inp_lineCount{integer} 83m4 88m7 88r24 99r36
-49r4 inp_UBlineStr{11|79R9} 87m7 94r53 97r51
-52p4 out_fhandle_01{13|52P9} 77m17 77r17 94r22 103m16 103r16
-53p4 out_fhandle_02{13|52P9} 78m17 78r17 98r36 104m16 104r16
+48i4 inp_lineCount{integer} 82m4 87m7 87r24 96r83
+49r4 inp_UBlineStr{11|79R9} 86m7 93r53 96r51
+52p4 out_fhandle_01{13|52P9} 77m17 77r17 93r22 100m16 100r16
+53p4 out_fhandle_02{13|52P9} 78m17 78r17 96r67 101m16 101r16
 54p4 out_fhandle_03{13|52P9}
 55p4 out_fhandle_04{13|52P9}
 57e4 out_fmode_01{13|53E9} 77r33
@@ -149,16 +149,17 @@ X 18 main_ada_edit_ngctodriver_codes.adb
 61a4 out_fname_02{string} 78r47
 X 19 pkg_ada_cnc_driver_codes.ads
 11K9*pkg_ada_cnc_driver_codes 18|16w6 33r28 19|31e29
-21U14*remove_gcode_comments 18|97s13
-26U14*create_gcode_action_file 18|110s13
+21U14*remove_gcode_comments 18|96s13
+24U14*create_gcode_action_file 18|106s10
+27U14*calculate_gcode_delta_actions 18|110s10
 X 20 pkg_ada_datetime_stamp.ads
 10K9*pkg_ada_datetime_stamp 18|12w6 29r28 20|27e27
-21U14*dtstamp 18|66s35 68s10 127s25 130s10
+21U14*dtstamp 18|66s35 68s10 117s25 120s10
 X 21 pkg_ada_linestring_split.ads
 11K9*pkg_ada_linestring_split 18|14w6 31r28 21|24e29
 X 22 pkg_ada_realtime_delays.ads
 10K9*pkg_ada_realtime_delays 18|13w6 30r28 22|46e28
-36U14*exec_display_execution_time 18|131s10
+36U14*exec_display_execution_time 18|121s10
 X 23 pkg_ada_vectorize_splitline.ads
 11K9*pkg_ada_vectorize_splitline 18|15w6 32r28 23|25e32
 X 24 system.ads

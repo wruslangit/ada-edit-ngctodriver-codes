@@ -9,6 +9,7 @@ P ZX
 RN
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
 RV NO_IO
 RV NO_IMPLICIT_CONDITIONALS
 RV NO_NESTED_FINALIZATION
@@ -20,7 +21,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U pkg_ada_cnc_driver_codes%b  pkg_ada_cnc_driver_codes.adb  f3f1ca91 OO PF PK IL
+U pkg_ada_cnc_driver_codes%b  pkg_ada_cnc_driver_codes.adb  920c8fbc OO PF PK IL
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.latin_1%s  a-chlat1.ads	a-chlat1.ali
@@ -34,11 +35,13 @@ W ada.text_io%s		a-textio.adb		a-textio.ali
 W gnat%s		gnat.ads		gnat.ali
 W gnat.string_split%s	g-strspl.ads		g-strspl.ali
 Z interfaces%s		interfac.ads		interfac.ali
+Z system.img_real%s	s-imgrea.adb		s-imgrea.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.val_real%s	s-valrea.adb		s-valrea.ali
 
-U pkg_ada_cnc_driver_codes%s  pkg_ada_cnc_driver_codes.ads  046cb7d8 EE NE OO PK IL
+U pkg_ada_cnc_driver_codes%s  pkg_ada_cnc_driver_codes.ads  dae064d9 EE NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -63,8 +66,8 @@ D g-strspl.ads		20200312110721 dbf24c7a gnat.string_split%s
 D interfac.ads		20200312110721 5ab55268 interfaces%s
 D i-c.ads		20200312110721 5421119b interfaces.c%s
 D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
-D pkg_ada_cnc_driver_codes.ads  20210601095349 8e31f8f1 pkg_ada_cnc_driver_codes%s
-D pkg_ada_cnc_driver_codes.adb  20210601140953 2209f457 pkg_ada_cnc_driver_codes%b
+D pkg_ada_cnc_driver_codes.ads  20210602023422 50bd2bf0 pkg_ada_cnc_driver_codes%s
+D pkg_ada_cnc_driver_codes.adb  20210602053655 9d78627b pkg_ada_cnc_driver_codes%b
 D system.ads		20200312110721 4635ec04 system%s
 D s-atacco.ads		20200312110721 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200312110721 b45c2d8d system.atomic_counters%s
@@ -73,6 +76,7 @@ D s-exctab.ads		20200312110721 54135002 system.exception_table%s
 D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
 D s-finmas.ads		20200312110721 7811a767 system.finalization_masters%s
 D s-finroo.ads		20200312110721 4ff27390 system.finalization_root%s
+D s-imgrea.ads		20200312110721 c7a851e2 system.img_real%s
 D s-linux.ads		20200312110721 ed0b8aee system.linux%s
 D s-memory.ads		20200312110721 597d6634 system.memory%s
 D s-multip.ads		20200312110721 38ac9f73 system.multiprocessors%s
@@ -95,6 +99,7 @@ D s-taprop.ads		20200312110721 1dd2e1b6 system.task_primitives.operations%s
 D s-taskin.ads		20200312110721 b9d612e2 system.tasking%s
 D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-valrea.ads		20200312110721 fe297711 system.val_real%s
 D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
 X 1 ada.ads
 16K9*Ada 20e8 21|6r6 7r6 8r6 16r26 17r26 22|6r6 7r6 8r6 9r6 10r6 11r6 12r6
@@ -112,118 +117,193 @@ X 10 a-strmap.ads
 38K21*Maps 411e21 22|12w18 27r39
 X 11 a-strunb.ads
 76K21*Unbounded 491e26 22|10w18 11r18 25r39
-79R9*Unbounded_String<5|43R9> 474e14 22|97r28 110r45 111r45 114r45 115r45
-. 118r48 119r48
-94V13*To_Unbounded_String{79R9} 22|136s24 137s24 138s24 139s24 140s24 141s24
-. 143s24 144s24 145s24 146s24 147s24 148s24 151s25 152s25 153s25 154s25 155s25
-. 156s25 160s32 188s30 189s30 190s30 191s30 192s30 193s30
-100V13*To_String{string} 22|168s37 200s17 200s50 200s83 201s17 201s50 201s83
-. 202s17 202s50 202s83 203s17 203s50 203s83 204s17 204s50 204s83 205s17 205s50
-. 205s83 212s17 212s50 212s83 213s17 213s50 213s83 214s17 214s50 214s83 215s17
-. 215s50 215s83 216s17 216s50 216s83 217s17 217s50 217s83
+79R9*Unbounded_String<5|43R9> 474e14 22|96r28 109r45 110r45 113r45 114r45
+. 117r48 118r48 242r28 255r45 256r45 259r45 260r45 263r48 264r48
+94V13*To_Unbounded_String{79R9} 22|135s24 136s24 137s24 138s24 139s24 140s24
+. 142s24 143s24 144s24 145s24 146s24 147s24 150s25 151s25 152s25 153s25 154s25
+. 155s25 159s32 187s30 188s30 189s30 190s30 191s30 192s30 281s32
+100V13*To_String{string} 22|167s37 199s17 199s50 199s83 200s17 200s50 200s83
+. 201s17 201s50 201s83 202s17 202s50 202s83 203s17 203s50 203s83 204s17 204s50
+. 204s83 289s37
 X 13 a-textio.ads
 49K13*Text_IO 471e16 21|8w10 17r30 22|6w10 7r10 23r31
-52P9*File_Type 21|22r60 22|42r62 100r32 101r32
-53E9*File_Mode 53e54 22|103r32 104r32
-53n23*In_File{53E9} 22|103r51
-53n32*Out_File{53E9} 22|104r51
-86U14*Create 22|127s12
-92U14*Open 22|124s12
-101U14*Reset 22|131s12 132s12
-183V13*End_Of_File{boolean} 22|159s22
-253V13*Get_Line{string} 22|160s57
-259U14*Put_Line 22|68s21 73s21 78s21 83s21 197s18
-263U14*Put_Line 22|209s18
+52P9*File_Type 21|21r86 22|41r86 99r32 100r32 245r32 246r32
+53E9*File_Mode 53e54 22|102r32 103r32 248r32 249r32
+53n23*In_File{53E9} 22|102r51 248r51
+53n32*Out_File{53E9} 22|103r51 249r51
+86U14*Create 22|126s12 271s12
+92U14*Open 22|123s12 268s12
+98U14*Close 22|232s12 233s12 381s9 382s9
+101U14*Reset 22|130s12 131s12 275s12 276s12
+183V13*End_Of_File{boolean} 22|158s22 280s22
+253V13*Get_Line{string} 22|159s57 281s57
+259U14*Put_Line 22|66s21 71s21 76s21 81s21 196s18 367s18
 X 15 gnat.ads
 34K9*GNAT 57e9 22|15r6 28r27
 X 16 g-arrspl.ads
 64E9*Separator_Mode
-70n7*Multiple{64E9[17|39]} 22|54r37[17|39] 170r37[17|39]
+70n7*Multiple{64E9[17|39]} 22|52r37[17|39] 169r37[17|39] 291r37[17|39]
 75R9*Slice_Set<5|43R9> 22|35r31[17|39] 36r31[17|39]
-83U14*Create 22|51s11[17|39] 167s14[17|39]
-84r7 S{75R9[17|39]} 22|51r19[17|39] 167r22[17|39]
-85a7 From{string} 22|52r19[17|39] 168r19[17|39]
-86a7 Separators{string} 22|53r19[17|39] 169r19[17|39]
-87e7 Mode{64E9[17|39]} 22|54r19[17|39] 170r19[17|39]
+83U14*Create 22|49s11[17|39] 166s14[17|39] 288s14[17|39]
+84r7 S{75R9[17|39]} 22|49r19[17|39] 166r22[17|39] 288r22[17|39]
+85a7 From{string} 22|50r19[17|39] 167r19[17|39] 289r19[17|39]
+86a7 Separators{string} 22|51r19[17|39] 168r19[17|39] 290r19[17|39]
+87e7 Mode{64E9[17|39]} 22|52r19[17|39] 169r19[17|39] 291r19[17|39]
 117I9*Slice_Number<integer>
-120V13*Slice_Count{117I9[17|39]} 22|58s25[17|39]
-124V13*Slice{string} 22|62s49[17|39] 176s52[17|39] 177s52[17|39] 178s45[17|39]
-. 179s45[17|39] 180s45[17|39] 181s45[17|39] 182s45[17|39] 183s45[17|39]
+120V13*Slice_Count{117I9[17|39]} 22|56s25[17|39]
+124V13*Slice{string} 22|60s49[17|39] 175s52[17|39] 176s52[17|39] 177s45[17|39]
+. 178s45[17|39] 179s45[17|39] 180s45[17|39] 181s45[17|39] 182s45[17|39] 303s52[17|39]
+. 304s52[17|39] 306s49[17|39] 307s49[17|39] 308s49[17|39] 309s49[17|39] 310s49[17|39]
+. 311s49[17|39] 312s49[17|39] 313s49[17|39] 314s49[17|39] 315s49[17|39] 316s49[17|39]
+. 317s49[17|39] 318s49[17|39] 319s49[17|39] 320s49[17|39] 321s49[17|39] 322s49[17|39]
+. 323s49[17|39]
 X 17 g-strspl.ads
 39K14*String_Split[16|58] 22|15w11 28r32
 X 21 pkg_ada_cnc_driver_codes.ads
-11K9*pkg_ada_cnc_driver_codes 31l5 31e29 22|18b14 241l5 241t29
+11K9*pkg_ada_cnc_driver_codes 31l5 31e29 22|18b14 390l5 390t29
 16K12*AART=16:30
-17K12*AATIO=17:30 22r54 22|42r56
-21U14*remove_gcode_comments 21>36 22>34 23>34 22|41b14 91l8 91t29
-21a36 linestring{string} 22|41b36 52r33 68r47 73r47 78r47 83r47
-22p34 out_fhandle_02{13|52P9} 22|42b36 68r31 73r31 78r31 83r31
-23i34 linecount{integer} 22|43b36
-26U14*create_gcode_action_file 22|94b14 234l8 234t32
+17K12*AATIO=17:30 21r80 22|41r80
+21U14*remove_gcode_comments 21>36 21>60 21>97 22|41b14 89l8 89t29
+21a36 linestring{string} 22|41b36 50r33 66r47 71r47 76r47 81r47
+21p60 out_fhandle_02{13|52P9} 22|41b60 66r31 71r31 76r31 81r31
+21i97 linecount{integer} 22|41b98
+24U14*create_gcode_action_file 22|93b14 235l8 235t32
+27U14*calculate_gcode_delta_actions 22|239b11 384l5 384t34
 X 22 pkg_ada_cnc_driver_codes.adb
-23K12 ATIO=23:31 68r16 73r16 78r16 83r16 100r27 101r27 103r27 103r46 104r27
-. 104r46 124r7 127r7 131r7 132r7 159r17 160r52 197r13 209r13
+23K12 ATIO=23:31 66r16 71r16 76r16 81r16 99r27 100r27 102r27 102r46 103r27
+. 103r46 123r7 126r7 130r7 131r7 158r17 159r52 196r13 232r7 233r7 245r27
+. 246r27 248r27 248r46 249r27 249r46 268r7 271r7 275r7 276r7 280r17 281r52
+. 367r13 381r4 382r4
 24K12 ART=24:31
-25K12 ASU=25:39 97r24 110r41 111r41 114r41 115r41 118r44 119r44 136r20 137r20
-. 138r20 139r20 140r20 141r20 143r20 144r20 145r20 146r20 147r20 148r20 151r21
-. 152r21 153r21 154r21 155r21 156r21 160r28 168r33 188r26 189r26 190r26 191r26
-. 192r26 193r26 200r13 200r46 200r79 201r13 201r46 201r79 202r13 202r46 202r79
-. 203r13 203r46 203r79 204r13 204r46 204r79 205r13 205r46 205r79 212r13 212r46
-. 212r79 213r13 213r46 213r79 214r13 214r46 214r79 215r13 215r46 215r79 216r13
-. 216r46 216r79 217r13 217r46 217r79
+25K12 ASU=25:39 96r24 109r41 110r41 113r41 114r41 117r44 118r44 135r20 136r20
+. 137r20 138r20 139r20 140r20 142r20 143r20 144r20 145r20 146r20 147r20 150r21
+. 151r21 152r21 153r21 154r21 155r21 159r28 167r33 187r26 188r26 189r26 190r26
+. 191r26 192r26 199r13 199r46 199r79 200r13 200r46 200r79 201r13 201r46 201r79
+. 202r13 202r46 202r79 203r13 203r46 203r79 204r13 204r46 204r79 242r24 255r41
+. 256r41 259r41 260r41 263r44 264r44 281r28 289r33
 26K12 ACL1=26:42 37r45
 27K12 ASM=27:39
-28K12 GSS=28:32 35r27 36r27 51r7 54r33 58r21 62r45 167r10 170r33 176r48 177r48
-. 178r41 179r41 180r41 181r41 182r41 183r41
-35r4 ActionLineString{16|75R9[17|39]} 51m33 58r38 62r56
-36r4 CNC_ActionLineString{16|75R9[17|39]} 167m33 176r59 177r59 178r52 179r52
-. 180r52 181r52 182r52 183r52
-37a4 TabAndSpace{string} 53r33 169r33
-58i11 I<integer> 62r74
-62a13 the_action{string} 66r16 71r16 76r16 81r16
-97r7 UBS_ActionLine{11|79R9} 160m10 168r47
-98i7 lineCount{integer} 133m7 161m10 161r23
-100p7 inp_fhandle_02{13|52P9} 124m18 124r18 131m18 131r18 159r35 160r67
-101p7 out_fhandle_03{13|52P9} 127m20 127r20 132m18 132r18 197r28
-103e7 inp_fmode_02{13|53E9} 124r34
-104e7 out_fmode_03{13|53E9} 127r36
-106a7 inp_fname_02{string} 124r48
-107a7 out_fname_03{string} 127r50
-110r7 ubscurr_x{11|79R9} 136m7 200r27 212r27 224m10
-110r18 ubscurr_y{11|79R9} 137m7 201r27 213r27 225m10
-110r29 ubscurr_z{11|79R9} 138m7 202r27 214r27 226m10
-111r7 ubscurr_i{11|79R9} 139m7 203r27 215r27 227m10
-111r18 ubscurr_j{11|79R9} 140m7 204r27 216r27 228m10
-111r29 ubscurr_f{11|79R9} 141m7 205r27 217r27 229m10
-114r7 ubsnext_x{11|79R9} 143m7 188m13 200r60 212r60 224r23
-114r18 ubsnext_y{11|79R9} 144m7 189m13 201r60 213r60 225r23
-114r29 ubsnext_z{11|79R9} 145m7 190m13 202r60 214r60 226r23
-115r7 ubsnext_i{11|79R9} 146m7 191m13 203r60 215r60 227r23
-115r18 ubsnext_j{11|79R9} 147m7 192m13 204r60 216r60 228r23
-115r29 ubsnext_f{11|79R9} 148m7 193m13 205r60 217r60 229r23
-118r7 ubsdelta_x{11|79R9} 151m7 200r93 212r93
-118r19 ubsdelta_y{11|79R9} 152m7 201r93 213r93
-118r31 ubsdelta_z{11|79R9} 153m7 202r93 214r93
-119r7 ubsdelta_i{11|79R9} 154m7 203r93 215r93
-119r19 ubsdelta_j{11|79R9} 155m7 204r93 216r93
-119r31 ubsdelta_f{11|79R9} 156m7 205r93 217r93
-176a13 the_lineno{string} 198r13 210r13
-177a13 the_cncaction{string} 199r13 211r13
-178a13 next_x{string} 188r51
-179a13 next_y{string} 189r51
-180a13 next_z{string} 190r51
-181a13 next_i{string} 191r51
-182a13 next_j{string} 192r51
-183a13 next_f{string} 193r51
+28K12 GSS=28:32 35r27 36r27 49r7 52r33 56r21 60r45 166r10 169r33 175r48 176r48
+. 177r41 178r41 179r41 180r41 181r41 182r41 288r10 291r33 303r48 304r48 306r45
+. 307r45 308r45 309r45 310r45 311r45 312r45 313r45 314r45 315r45 316r45 317r45
+. 318r45 319r45 320r45 321r45 322r45 323r45
+35r4 ActionLineString{16|75R9[17|39]} 49m33 56r38 60r56
+36r4 CNC_ActionLineString{16|75R9[17|39]} 166m33 175r59 176r59 177r52 178r52
+. 179r52 180r52 181r52 182r52 288m33 303r59 304r59 306r56 307r56 308r56 309r56
+. 310r56 311r56 312r56 313r56 314r56 315r56 316r56 317r56 318r56 319r56 320r56
+. 321r56 322r56 323r56
+37a4 TabAndSpace{string} 51r33 168r33 290r33
+56i11 I<integer> 60r74
+60a13 the_action{string} 64r16 69r16 74r16 79r16
+96r7 UBS_ActionLine{11|79R9} 159m10 167r47
+97i7 lineCount{integer} 132m7 160m10 160r23
+99p7 inp_fhandle_02{13|52P9} 123m18 123r18 130m18 130r18 158r35 159r67 232m19
+. 232r19
+100p7 out_fhandle_03{13|52P9} 126m20 126r20 131m18 131r18 196r28 233m19 233r19
+102e7 inp_fmode_02{13|53E9} 123r34
+103e7 out_fmode_03{13|53E9} 126r36
+105a7 inp_fname_02{string} 123r48
+106a7 out_fname_03{string} 126r50
+109r7 ubscurr_x{11|79R9} 135m7 199r27 223m10
+109r18 ubscurr_y{11|79R9} 136m7 200r27 224m10
+109r29 ubscurr_z{11|79R9} 137m7 201r27 225m10
+110r7 ubscurr_i{11|79R9} 138m7 202r27 226m10
+110r18 ubscurr_j{11|79R9} 139m7 203r27 227m10
+110r29 ubscurr_f{11|79R9} 140m7 204r27 228m10
+113r7 ubsnext_x{11|79R9} 142m7 187m13 199r60 223r23
+113r18 ubsnext_y{11|79R9} 143m7 188m13 200r60 224r23
+113r29 ubsnext_z{11|79R9} 144m7 189m13 201r60 225r23
+114r7 ubsnext_i{11|79R9} 145m7 190m13 202r60 226r23
+114r18 ubsnext_j{11|79R9} 146m7 191m13 203r60 227r23
+114r29 ubsnext_f{11|79R9} 147m7 192m13 204r60 228r23
+117r7 ubsdelta_x{11|79R9} 150m7 199r93
+117r19 ubsdelta_y{11|79R9} 151m7 200r93
+117r31 ubsdelta_z{11|79R9} 152m7 201r93
+118r7 ubsdelta_i{11|79R9} 153m7 202r93
+118r19 ubsdelta_j{11|79R9} 154m7 203r93
+118r31 ubsdelta_f{11|79R9} 155m7 204r93
+175a13 the_lineno{string} 197r13
+176a13 the_cncaction{string} 198r13
+177a13 next_x{string} 187r51
+178a13 next_y{string} 188r51
+179a13 next_z{string} 189r51
+180a13 next_i{string} 190r51
+181a13 next_j{string} 191r51
+182a13 next_f{string} 192r51
+242r7 UBS_ActionLine{11|79R9} 281m10 289r47
+243i7 lineCount{integer} 277m7 282m10 282r23
+245p7 inp_fhandle_03{13|52P9} 268m18 268r18 275m18 275r18 280r35 281r67 381m16
+. 381r16
+246p7 out_fhandle_04{13|52P9} 271m20 271r20 276m18 276r18 367r28 382m16 382r16
+248e7 inp_fmode_03{13|53E9} 268r34
+249e7 out_fmode_04{13|53E9} 271r36
+251a7 inp_fname_03{string} 268r48
+252a7 out_fname_04{string} 271r50
+255r7 ubscurr_x{11|79R9}
+255r18 ubscurr_y{11|79R9}
+255r29 ubscurr_z{11|79R9}
+256r7 ubscurr_i{11|79R9}
+256r18 ubscurr_j{11|79R9}
+256r29 ubscurr_f{11|79R9}
+259r7 ubsnext_x{11|79R9}
+259r18 ubsnext_y{11|79R9}
+259r29 ubsnext_z{11|79R9}
+260r7 ubsnext_i{11|79R9}
+260r18 ubsnext_j{11|79R9}
+260r29 ubsnext_f{11|79R9}
+263r7 ubsdelta_x{11|79R9}
+263r19 ubsdelta_y{11|79R9}
+263r31 ubsdelta_z{11|79R9}
+264r7 ubsdelta_i{11|79R9}
+264r19 ubsdelta_j{11|79R9}
+264r31 ubsdelta_f{11|79R9}
+295f13 fltcurr_x{float} 329m13 332r40 369r29
+295f24 fltnext_x{float} 330m13 332r28 369r60
+295f35 fltdelta_x{float} 331m13 332m13 369r91
+296f13 fltcurr_y{float} 333m13 336r40 370r29
+296f24 fltnext_y{float} 334m13 336r28 370r60
+296f35 fltdelta_y{float} 335m13 336m13 370r91
+297f13 fltcurr_z{float} 337m13 340r40 371r29
+297f24 fltnext_z{float} 338m13 340r28 371r60
+297f35 fltdelta_z{float} 339m13 340m13 371r91
+298f13 fltcurr_i{float} 341m13 344r40 372r29
+298f24 fltnext_i{float} 342m13 344r28 372r60
+298f35 fltdelta_i{float} 343m13 344m13 372r91
+299f13 fltcurr_j{float} 345m13 348r40 373r29
+299f24 fltnext_j{float} 346m13 348r28 373r60
+299f35 fltdelta_j{float} 347m13 348m13 373r91
+300f13 fltcurr_f{float} 349m13 352r40 374r29
+300f24 fltnext_f{float} 350m13 352r28 374r60
+300f35 fltdelta_f{float} 351m13 352m13 374r91
+303a13 the_lineno{string} 368r17
+304a13 the_cncaction{string} 368r36
+306a13 strcurr_x{string} 329r39
+307a13 strnext_x{string} 330r39
+308a13 strdelta_x{string} 331r39
+309a13 strcurr_y{string} 333r39
+310a13 strnext_y{string} 334r39
+311a13 strdelta_y{string} 335r39
+312a13 strcurr_z{string} 337r39
+313a13 strnext_z{string} 338r39
+314a13 strdelta_z{string} 339r39
+315a13 strcurr_i{string} 341r39
+316a13 strnext_i{string} 342r39
+317a13 strdelta_i{string} 343r39
+318a13 strcurr_j{string} 345r39
+319a13 strnext_j{string} 346r39
+320a13 strdelta_j{string} 347r39
+321a13 strcurr_f{string} 349r39
+322a13 strnext_f{string} 350r39
+323a13 strdelta_f{string} 351r39
 X 23 system.ads
 67M9*Address
-X 32 s-memory.ads
+X 33 s-memory.ads
 53V13*Alloc{23|67M9} 103i<c,__gnat_malloc>22
 68U14*Free 104i<c,__gnat_free>22
 76V13*Realloc{23|67M9} 105i<c,__gnat_realloc>22
-X 40 s-stausa.ads
+X 41 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
-X 42 s-stalib.adb
+X 43 s-stalib.adb
 93U14 Break_Start 94i<c,__gnat_break_start>22
 

@@ -2,13 +2,13 @@
 -- Date: Tue 01 Jun 2021 12:41:11 PM +08
 -- Author: WRY wruslan.ump@gmail.com
 -- ========================================================
--- IMPORT STANDARD ADA PACKAGES
+-- IMPORT STANDARD ADA PACKAGES (BUILT INTO LANGUAGE)
 with Ada.Text_IO;
 with Ada.Real_Time; 
 use  Ada.Real_Time;
 with Ada.Strings.Unbounded;
 
--- IMPORT USER-DEFINED ADA PACKAGES
+-- IMPORT USER-DEFINED ADA PACKAGES (WRITTEN BY USER)
 with pkg_ada_datetime_stamp;
 with pkg_ada_realtime_delays;
 with pkg_ada_linestring_split;
@@ -76,7 +76,6 @@ begin  -- =================================================
    -- CREATE OUTPUT FILES
    ATIO.Create (out_fhandle_01, out_fmode_01, out_fname_01); 
    ATIO.Create (out_fhandle_02, out_fmode_02, out_fname_02);
-    
       
    -- RESET - GO BACK TO TOP OF FILE
    ATIO.reset(inp_fhandle); -- Set line pointer back to the top of file
@@ -87,41 +86,32 @@ begin  -- =================================================
       inp_UBlineStr := ASU.To_Unbounded_String(ATIO.Get_Line (inp_fhandle));
       inp_lineCount := inp_lineCount + 1;
       
-      -- WRITE LINE TO SCREEN
+      -- WRITE LINE TO SCREEN FOR VISUAL CONFIRMATION
       -- ATIO.Put_Line (ATIO.Standard_Output, ASU.To_String (inp_UBlineStr));
    
-      -- WRITE LINE TO FILE AS BACKUP
+      -- STEP (1) READ NGC IMPUT THEN WRITE LINE AS RECORD (EXACT COPY) TO fhandle_01
       ATIO.Put_Line (out_fhandle_01, ASU.To_String (inp_UBlineStr));
       
-      -- REMOVE COMMENTS IN fhandle_01 WRITE RESULTS TO fhandle_02     
-      PACDC.remove_gcode_comments (ASU.To_String (inp_UBlineStr), 
-                                   out_fhandle_02, 
-                                   inp_lineCount); 
+      -- STEP (2) REMOVE COMMENTS IN fhandle_01 WRITE RESULTS TO fhandle_02     
+      PACDC.remove_gcode_comments (ASU.To_String (inp_UBlineStr), out_fhandle_02, inp_lineCount); 
       
    end loop;  
    -- CLOSE ALL OPEN FILES
    ATIO.Close (out_fhandle_01);
    ATIO.Close (out_fhandle_02);
    ATIO.Close (inp_fhandle);
-   
-      
-   -- READ FROM fhandle_02 THEN WRITE TO fhandle_03 
+       
+   -- STEP (3) READ FROM fhandle_02 THEN WRITE TO fhandle_03 
    -- WRITE VECTOR FROM_X TO_X FOR EACH CNC ACTION
-      PACDC.create_gcode_action_file;
-      
-   -- WRITE TO fhandle_04 THE FOLLOWING LINE (EACH LINE = 20 FIELDS)
-   -- LINENO ACTION 
-   -- prevX nextX deltaX, 
-   -- prevY nextY deltaY, 
-   -- prevZ nextZ deltaZ, 
-   -- prevI nextI deltaI,
-   -- prevJ nextJ deltaJ,
-   -- prevF nextF deltaF  
-      
+   PACDC.create_gcode_action_file;
+       
+   -- STEP (4) READ FROM fhandle_03 THEN WRITE TO fhandle_04 
+   -- WRITE VECTOR (CURRENT, NEXT, DELTA) FOR EACH CNC ACTION
+   PACDC.calculate_gcode_delta_actions; 
    
- 
    
-      
+   
+         
    -- CODE ENDS HERE
    -- =====================================================
    ATIO.New_Line; PADTS.dtstamp;

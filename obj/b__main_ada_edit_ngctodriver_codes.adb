@@ -34,16 +34,16 @@ package body ada_main is
    E128 : Short_Integer; pragma Import (Ada, E128, "ada__strings__unbounded_E");
    E114 : Short_Integer; pragma Import (Ada, E114, "system__task_info_E");
    E106 : Short_Integer; pragma Import (Ada, E106, "system__task_primitives__operations_E");
-   E175 : Short_Integer; pragma Import (Ada, E175, "ada__calendar_E");
-   E179 : Short_Integer; pragma Import (Ada, E179, "ada__calendar__time_zones_E");
+   E187 : Short_Integer; pragma Import (Ada, E187, "ada__calendar_E");
+   E191 : Short_Integer; pragma Import (Ada, E191, "ada__calendar__time_zones_E");
    E097 : Short_Integer; pragma Import (Ada, E097, "ada__real_time_E");
    E161 : Short_Integer; pragma Import (Ada, E161, "ada__text_io_E");
    E171 : Short_Integer; pragma Import (Ada, E171, "gnat__string_split_E");
    E168 : Short_Integer; pragma Import (Ada, E168, "pkg_ada_cnc_driver_codes_E");
-   E173 : Short_Integer; pragma Import (Ada, E173, "pkg_ada_datetime_stamp_E");
-   E197 : Short_Integer; pragma Import (Ada, E197, "pkg_ada_linestring_split_E");
-   E205 : Short_Integer; pragma Import (Ada, E205, "pkg_ada_realtime_delays_E");
-   E209 : Short_Integer; pragma Import (Ada, E209, "pkg_ada_vectorize_splitline_E");
+   E185 : Short_Integer; pragma Import (Ada, E185, "pkg_ada_datetime_stamp_E");
+   E201 : Short_Integer; pragma Import (Ada, E201, "pkg_ada_linestring_split_E");
+   E209 : Short_Integer; pragma Import (Ada, E209, "pkg_ada_realtime_delays_E");
+   E213 : Short_Integer; pragma Import (Ada, E213, "pkg_ada_vectorize_splitline_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -257,9 +257,9 @@ package body ada_main is
       E106 := E106 + 1;
       Ada.Calendar'Elab_Spec;
       Ada.Calendar'Elab_Body;
-      E175 := E175 + 1;
+      E187 := E187 + 1;
       Ada.Calendar.Time_Zones'Elab_Spec;
-      E179 := E179 + 1;
+      E191 := E191 + 1;
       Ada.Real_Time'Elab_Spec;
       Ada.Real_Time'Elab_Body;
       E097 := E097 + 1;
@@ -271,13 +271,13 @@ package body ada_main is
       pkg_ada_cnc_driver_codes'elab_body;
       E168 := E168 + 1;
       pkg_ada_datetime_stamp'elab_body;
-      E173 := E173 + 1;
+      E185 := E185 + 1;
       pkg_ada_linestring_split'elab_body;
-      E197 := E197 + 1;
+      E201 := E201 + 1;
       pkg_ada_realtime_delays'elab_body;
-      E205 := E205 + 1;
-      pkg_ada_vectorize_splitline'elab_body;
       E209 := E209 + 1;
+      pkg_ada_vectorize_splitline'elab_body;
+      E213 := E213 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
